@@ -1,0 +1,4 @@
+{
+    "shippingMethods": ["Standard Shipping", "Express Shipping", "Same-Day Delivery"],
+    "paymentMethods": ["Credit Card", "Bank Transfer", "E-Wallet"]
+}

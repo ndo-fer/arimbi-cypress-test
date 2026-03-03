@@ -1,0 +1,65 @@
+Alur Utama,Sub-Alur/Kasus Uji,Deskripsi,Hasil yang Diharapkan,Kriteria Sukses
+Login,Login Valid,Pengguna login dengan kredensial yang valid,Pengguna diarahkan ke halaman utama,Halaman utama ditampilkan dengan elemen header dan nama pengguna
+Login,Login Tidak Valid,Pengguna mencoba login dengan kredensial yang tidak valid,Pesan kesalahan ditampilkan,Pesan error "Kredensial tidak valid" muncul
+Login,Sesi Kedaluwarsa,Sesi pengguna berakhir setelah tidak aktif,Pengguna diarahkan ke halaman login,Halaman login ditampilkan dengan form login
+Tambah ke Keranjang,Menambahkan ke Keranjang Dasar,Pengguna menambahkan produk ke keranjang dari daftar produk,Produk ditambahkan ke keranjang dan sidebar muncul,Sidebar keranjang muncul dengan nama produk
+Tambah ke Keranjang,Menambahkan ke Keranjang dari Halaman Detail Produk,Pengguna menambahkan produk ke keranjang dari halaman detail produk,Produk ditambahkan ke keranjang dan sidebar muncul,Sidebar keranjang muncul dengan nama produk
+Tambah ke Keranjang,Validasi Sidebar Keranjang,Pengguna memverifikasi detail produk di sidebar keranjang,Detail produk yang benar ditampilkan,Detail produk seperti nama, harga, dan jumlah sesuai
+Checkout,Visibilitas Tombol Checkout,Pengguna memverifikasi visibilitas tombol "Checkout",Tombol Checkout terlihat,Tombol "Checkout" aktif dan dapat diklik
+Checkout,Fungsi Tombol Checkout,Pengguna mengklik tombol "Checkout",Pengguna diarahkan ke halaman checkout,URL berubah ke halaman checkout
+Checkout,Pemilihan Metode Pengiriman,Pengguna memilih metode pengiriman,Metode pengiriman yang dipilih disorot,Metode pengiriman memiliki status "dipilih"
+Checkout,Pemilihan Metode Pembayaran,Pengguna memilih metode pembayaran,Metode pembayaran yang dipilih disorot,Metode pembayaran memiliki status "dipilih"
+Checkout,Checkout Final,Pengguna mengklik tombol "Checkout Final",Modal pembayaran muncul,Modal pembayaran terlihat dengan informasi pembayaran
+Checkout,Validasi Modal Pembayaran,Pengguna memverifikasi detail pembayaran di modal,Detail pembayaran yang benar ditampilkan,Informasi pembayaran seperti total harga dan metode pembayaran sesuai
+Checkout,Pengujian Kombinasi Metode Pengiriman dan Pembayaran,Pengguna memilih metode pengiriman dan pembayaran,Metode pengiriman dan pembayaran berhasil diproses,Pesanan berhasil dibuat dengan ringkasan pesanan
+Checkout,KOMERCE + QRIS,Pengguna memilih KOMERCE dan QRIS,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode KOMERCE dan QRIS
+Checkout,KOMERCE + BNI (VA),Pengguna memilih KOMERCE dan BNI (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode KOMERCE dan BNI (VA)
+Checkout,KOMERCE + BCA (VA),Pengguna memilih KOMERCE dan BCA (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode KOMERCE dan BCA (VA)
+Checkout,KOMERCE + Mandiri (VA),Pengguna memilih KOMERCE dan Mandiri (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode KOMERCE dan Mandiri (VA)
+Checkout,KOMERCE + BRI (VA),Pengguna memilih KOMERCE dan BRI (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode KOMERCE dan BRI (VA)
+Checkout,KOMERCE + Indomaret,Pengguna memilih KOMERCE dan Indomaret,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode KOMERCE dan Indomaret
+Checkout,KOMERCE + Alfamart Counter,Pengguna memilih KOMERCE dan Alfamart Counter,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode KOMERCE dan Alfamart Counter
+Checkout,JNE Express (Regular) + QRIS,Pengguna memilih JNE Express (Regular) dan QRIS,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode JNE Express (Regular) dan QRIS
+Checkout,JNE Express (Regular) + BNI (VA),Pengguna memilih JNE Express (Regular) dan BNI (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode JNE Express (Regular) dan BNI (VA)
+Checkout,JNE Express (Regular) + BCA (VA),Pengguna memilih JNE Express (Regular) dan BCA (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode JNE Express (Regular) dan BCA (VA)
+Checkout,JNE Express (Regular) + Mandiri (VA),Pengguna memilih JNE Express (Regular) dan Mandiri (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode JNE Express (Regular) dan Mandiri (VA)
+Checkout,JNE Express (Regular) + BRI (VA),Pengguna memilih JNE Express (Regular) dan BRI (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode JNE Express (Regular) dan BRI (VA)
+Checkout,JNE Express (Regular) + Indomaret,Pengguna memilih JNE Express (Regular) dan Indomaret,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode JNE Express (Regular) dan Indomaret
+Checkout,JNE Express (Regular) + Alfamart Counter,Pengguna memilih JNE Express (Regular) dan Alfamart Counter,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode JNE Express (Regular) dan Alfamart Counter
+Checkout,KURIR EXPRESS + QRIS,Pengguna memilih KURIR EXPRESS dan QRIS,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode KURIR EXPRESS dan QRIS
+Checkout,KURIR EXPRESS + BNI (VA),Pengguna memilih KURIR EXPRESS dan BNI (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode KURIR EXPRESS dan BNI (VA)
+Checkout,KURIR EXPRESS + BCA (VA),Pengguna memilih KURIR EXPRESS dan BCA (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode KURIR EXPRESS dan BCA (VA)
+Checkout,KURIR EXPRESS + Mandiri (VA),Pengguna memilih KURIR EXPRESS dan Mandiri (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode KURIR EXPRESS dan Mandiri (VA)
+Checkout,KURIR EXPRESS + BRI (VA),Pengguna memilih KURIR EXPRESS dan BRI (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode KURIR EXPRESS dan BRI (VA)
+Checkout,KURIR EXPRESS + Indomaret,Pengguna memilih KURIR EXPRESS dan Indomaret,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode KURIR EXPRESS dan Indomaret
+Checkout,KURIR EXPRESS + Alfamart Counter,Pengguna memilih KURIR EXPRESS dan Alfamart Counter,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode KURIR EXPRESS dan Alfamart Counter
+Checkout,Si Cepat (Express 25) + QRIS,Pengguna memilih Si Cepat (Express 25) dan QRIS,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode Si Cepat (Express 25) dan QRIS
+Checkout,Si Cepat (Express 25) + BNI (VA),Pengguna memilih Si Cepat (Express 25) dan BNI (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode Si Cepat (Express 25) dan BNI (VA)
+Checkout,Si Cepat (Express 25) + BCA (VA),Pengguna memilih Si Cepat (Express 25) dan BCA (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode Si Cepat (Express 25) dan BCA (VA)
+Checkout,Si Cepat (Express 25) + Mandiri (VA),Pengguna memilih Si Cepat (Express 25) dan Mandiri (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode Si Cepat (Express 25) dan Mandiri (VA)
+Checkout,Si Cepat (Express 25) + BRI (VA),Pengguna memilih Si Cepat (Express 25) dan BRI (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode Si Cepat (Express 25) dan BRI (VA)
+Checkout,Si Cepat (Express 25) + Indomaret,Pengguna memilih Si Cepat (Express 25) dan Indomaret,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode Si Cepat (Express 25) dan Indomaret
+Checkout,Si Cepat (Express 25) + Alfamart Counter,Pengguna memilih Si Cepat (Express 25) dan Alfamart Counter,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode Si Cepat (Express 25) dan Alfamart Counter
+Checkout,Gojek Express 25 + QRIS,Pengguna memilih Gojek Express 25 dan QRIS,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode Gojek Express 25 dan QRIS
+Checkout,Gojek Express 25 + BNI (VA),Pengguna memilih Gojek Express 25 dan BNI (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode Gojek Express 25 dan BNI (VA)
+Checkout,Gojek Express 25 + BCA (VA),Pengguna memilih Gojek Express 25 dan BCA (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode Gojek Express 25 dan BCA (VA)
+Checkout,Gojek Express 25 + Mandiri (VA),Pengguna memilih Gojek Express 25 dan Mandiri (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode Gojek Express 25 dan Mandiri (VA)
+Checkout,Gojek Express 25 + BRI (VA),Pengguna memilih Gojek Express 25 dan BRI (VA),Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode Gojek Express 25 dan BRI (VA)
+Checkout,Gojek Express 25 + Indomaret,Pengguna memilih Gojek Express 25 dan Indomaret,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode Gojek Express 25 dan Indomaret
+Checkout,Gojek Express 25 + Alfamart Counter,Pengguna memilih Gojek Express 25 dan Alfamart Counter,Checkout berhasil dengan metode ini,Pesanan berhasil dibuat dengan metode Gojek Express 25 dan Alfamart Counter
+Navigasi Navbar,Promo Spesial,Pengguna mengunjungi halaman Promo Spesial dari navbar,Halaman Promo Spesial ditampilkan,Halaman Promo Spesial terlihat dengan banner promo
+Navigasi Navbar,Promo 12.12,Pengguna mengunjungi halaman Promo 12.12 dari navbar,Halaman Promo 12.12 ditampilkan,Halaman Promo 12.12 terlihat dengan daftar promo
+Navigasi Navbar,Fashion Pria,Pengguna mengunjungi halaman Fashion Pria dari navbar,Halaman Fashion Pria ditampilkan,Halaman Fashion Pria terlihat dengan kategori produk pria
+Navigasi Navbar,Fashion Wanita,Pengguna mengunjungi halaman Fashion Wanita dari navbar,Halaman Fashion Wanita ditampilkan,Halaman Fashion Wanita terlihat dengan kategori produk wanita
+Navigasi Navbar,Fashion Anak,Pengguna mengunjungi halaman Fashion Anak dari navbar,Halaman Fashion Anak ditampilkan,Halaman Fashion Anak terlihat dengan kategori produk anak
+Pencarian dan Filter Produk,Pencarian Berdasarkan Nama,Pengguna mencari produk berdasarkan nama,Produk yang relevan ditampilkan,Daftar produk sesuai dengan kata kunci pencarian
+Pencarian dan Filter Produk,Menerapkan Filter,Pengguna menerapkan filter untuk mempersempit produk,Produk yang difilter ditampilkan,Daftar produk sesuai dengan filter yang diterapkan
+Halaman Detail Produk,Melihat Detail Produk,Pengguna melihat detail produk,Detail produk ditampilkan,Detail produk seperti nama, harga, dan deskripsi terlihat
+Halaman Detail Produk,Memilih Varian Produk,Pengguna memilih varian produk (misalnya, ukuran, warna),Varian yang dipilih disorot,Varian produk memiliki status "dipilih"
+Riwayat Pesanan,Melihat Pesanan Sebelumnya,Pengguna melihat pesanan sebelumnya,Riwayat pesanan ditampilkan,Daftar pesanan sebelumnya terlihat dengan detail
+Riwayat Pesanan,Memesan Ulang,Pengguna memesan ulang produk dari pesanan sebelumnya,Produk ditambahkan ke keranjang,Produk dari pesanan sebelumnya muncul di keranjang
+Manajemen Profil Pengguna,Memperbarui Profil,Pengguna memperbarui informasi profil mereka,Profil diperbarui dengan sukses,Informasi profil seperti nama dan alamat diperbarui
+Manajemen Profil Pengguna,Mengubah Kata Sandi,Pengguna mengubah kata sandi mereka,Kata sandi diperbarui dengan sukses,Pesan sukses "Kata sandi berhasil diubah" muncul
+Wishlist,Menambahkan ke Wishlist,Pengguna menambahkan produk ke wishlist,Produk ditambahkan ke wishlist,Produk muncul di daftar wishlist
+Wishlist,Memindahkan ke Keranjang,Pengguna memindahkan produk dari wishlist ke keranjang,Produk dipindahkan ke keranjang,Produk muncul di keranjang
+Notifikasi,Melihat Notifikasi,Pengguna melihat notifikasi,Notifikasi ditampilkan,Daftar notifikasi terlihat dengan detail

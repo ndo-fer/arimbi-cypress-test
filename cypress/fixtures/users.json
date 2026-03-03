@@ -1,0 +1,14 @@
+{
+    "validUser": {
+        "noTelepon": "87754196023",
+        "password": "abc123"
+    },
+    "invalidUser": {
+        "noTelepon": "81234567890",
+        "password": "password_salah"
+    },
+    "emptyUser": {
+        "noTelepon": "",
+        "password": ""
+    }
+}

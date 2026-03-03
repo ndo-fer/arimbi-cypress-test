@@ -1,0 +1,65 @@
+Alur Utama,Sub-Alur/Kasus Uji,Deskripsi,Hasil yang Diharapkan,Tangkapan Layar
+Login,Login Valid,Pengguna login dengan kredensial yang valid,Pengguna diarahkan ke halaman utama,Placeholder
+Login,Login Tidak Valid,Pengguna mencoba login dengan kredensial yang tidak valid,Pesan kesalahan ditampilkan,Placeholder
+Login,Sesi Kedaluwarsa,Sesi pengguna berakhir setelah tidak aktif,Pengguna diarahkan ke halaman login,Placeholder
+Tambah ke Keranjang,Menambahkan ke Keranjang Dasar,Pengguna menambahkan produk ke keranjang dari daftar produk,Produk ditambahkan ke keranjang dan sidebar muncul,Placeholder
+Tambah ke Keranjang,Menambahkan ke Keranjang dari Halaman Detail Produk,Pengguna menambahkan produk ke keranjang dari halaman detail produk,Produk ditambahkan ke keranjang dan sidebar muncul,Placeholder
+Tambah ke Keranjang,Validasi Sidebar Keranjang,Pengguna memverifikasi detail produk di sidebar keranjang,Detail produk yang benar ditampilkan,Placeholder
+Checkout,Visibilitas Tombol Checkout,Pengguna memverifikasi visibilitas tombol "Checkout",Tombol Checkout terlihat,Placeholder
+Checkout,Fungsi Tombol Checkout,Pengguna mengklik tombol "Checkout",Pengguna diarahkan ke halaman checkout,Placeholder
+Checkout,Pemilihan Metode Pengiriman,Pengguna memilih metode pengiriman,Metode pengiriman yang dipilih disorot,Placeholder
+Checkout,Pemilihan Metode Pembayaran,Pengguna memilih metode pembayaran,Metode pembayaran yang dipilih disorot,Placeholder
+Checkout,Checkout Final,Pengguna mengklik tombol "Checkout Final",Modal pembayaran muncul,Placeholder
+Checkout,Validasi Modal Pembayaran,Pengguna memverifikasi detail pembayaran di modal,Detail pembayaran yang benar ditampilkan,Placeholder
+Checkout,Pengujian Kombinasi Metode Pengiriman dan Pembayaran,Pengguna memilih metode pengiriman dan pembayaran,Metode pengiriman dan pembayaran berhasil diproses,Placeholder
+Checkout,KOMERCE + QRIS,Pengguna memilih KOMERCE dan QRIS,Checkout berhasil dengan metode ini,Placeholder
+Checkout,KOMERCE + BNI (VA),Pengguna memilih KOMERCE dan BNI (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,KOMERCE + BCA (VA),Pengguna memilih KOMERCE dan BCA (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,KOMERCE + Mandiri (VA),Pengguna memilih KOMERCE dan Mandiri (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,KOMERCE + BRI (VA),Pengguna memilih KOMERCE dan BRI (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,KOMERCE + Indomaret,Pengguna memilih KOMERCE dan Indomaret,Checkout berhasil dengan metode ini,Placeholder
+Checkout,KOMERCE + Alfamart Counter,Pengguna memilih KOMERCE dan Alfamart Counter,Checkout berhasil dengan metode ini,Placeholder
+Checkout,JNE Express (Regular) + QRIS,Pengguna memilih JNE Express (Regular) dan QRIS,Checkout berhasil dengan metode ini,Placeholder
+Checkout,JNE Express (Regular) + BNI (VA),Pengguna memilih JNE Express (Regular) dan BNI (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,JNE Express (Regular) + BCA (VA),Pengguna memilih JNE Express (Regular) dan BCA (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,JNE Express (Regular) + Mandiri (VA),Pengguna memilih JNE Express (Regular) dan Mandiri (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,JNE Express (Regular) + BRI (VA),Pengguna memilih JNE Express (Regular) dan BRI (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,JNE Express (Regular) + Indomaret,Pengguna memilih JNE Express (Regular) dan Indomaret,Checkout berhasil dengan metode ini,Placeholder
+Checkout,JNE Express (Regular) + Alfamart Counter,Pengguna memilih JNE Express (Regular) dan Alfamart Counter,Checkout berhasil dengan metode ini,Placeholder
+Checkout,KURIR EXPRESS + QRIS,Pengguna memilih KURIR EXPRESS dan QRIS,Checkout berhasil dengan metode ini,Placeholder
+Checkout,KURIR EXPRESS + BNI (VA),Pengguna memilih KURIR EXPRESS dan BNI (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,KURIR EXPRESS + BCA (VA),Pengguna memilih KURIR EXPRESS dan BCA (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,KURIR EXPRESS + Mandiri (VA),Pengguna memilih KURIR EXPRESS dan Mandiri (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,KURIR EXPRESS + BRI (VA),Pengguna memilih KURIR EXPRESS dan BRI (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,KURIR EXPRESS + Indomaret,Pengguna memilih KURIR EXPRESS dan Indomaret,Checkout berhasil dengan metode ini,Placeholder
+Checkout,KURIR EXPRESS + Alfamart Counter,Pengguna memilih KURIR EXPRESS dan Alfamart Counter,Checkout berhasil dengan metode ini,Placeholder
+Checkout,Si Cepat (Express 25) + QRIS,Pengguna memilih Si Cepat (Express 25) dan QRIS,Checkout berhasil dengan metode ini,Placeholder
+Checkout,Si Cepat (Express 25) + BNI (VA),Pengguna memilih Si Cepat (Express 25) dan BNI (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,Si Cepat (Express 25) + BCA (VA),Pengguna memilih Si Cepat (Express 25) dan BCA (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,Si Cepat (Express 25) + Mandiri (VA),Pengguna memilih Si Cepat (Express 25) dan Mandiri (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,Si Cepat (Express 25) + BRI (VA),Pengguna memilih Si Cepat (Express 25) dan BRI (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,Si Cepat (Express 25) + Indomaret,Pengguna memilih Si Cepat (Express 25) dan Indomaret,Checkout berhasil dengan metode ini,Placeholder
+Checkout,Si Cepat (Express 25) + Alfamart Counter,Pengguna memilih Si Cepat (Express 25) dan Alfamart Counter,Checkout berhasil dengan metode ini,Placeholder
+Checkout,Gojek Express 25 + QRIS,Pengguna memilih Gojek Express 25 dan QRIS,Checkout berhasil dengan metode ini,Placeholder
+Checkout,Gojek Express 25 + BNI (VA),Pengguna memilih Gojek Express 25 dan BNI (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,Gojek Express 25 + BCA (VA),Pengguna memilih Gojek Express 25 dan BCA (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,Gojek Express 25 + Mandiri (VA),Pengguna memilih Gojek Express 25 dan Mandiri (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,Gojek Express 25 + BRI (VA),Pengguna memilih Gojek Express 25 dan BRI (VA),Checkout berhasil dengan metode ini,Placeholder
+Checkout,Gojek Express 25 + Indomaret,Pengguna memilih Gojek Express 25 dan Indomaret,Checkout berhasil dengan metode ini,Placeholder
+Checkout,Gojek Express 25 + Alfamart Counter,Pengguna memilih Gojek Express 25 dan Alfamart Counter,Checkout berhasil dengan metode ini,Placeholder
+Navigasi Navbar,Promo Spesial,Pengguna mengunjungi halaman Promo Spesial dari navbar,Halaman Promo Spesial ditampilkan,Placeholder
+Navigasi Navbar,Promo 12.12,Pengguna mengunjungi halaman Promo 12.12 dari navbar,Halaman Promo 12.12 ditampilkan,Placeholder
+Navigasi Navbar,Fashion Pria,Pengguna mengunjungi halaman Fashion Pria dari navbar,Halaman Fashion Pria ditampilkan,Placeholder
+Navigasi Navbar,Fashion Wanita,Pengguna mengunjungi halaman Fashion Wanita dari navbar,Halaman Fashion Wanita ditampilkan,Placeholder
+Navigasi Navbar,Fashion Anak,Pengguna mengunjungi halaman Fashion Anak dari navbar,Halaman Fashion Anak ditampilkan,Placeholder
+Pencarian dan Filter Produk,Pencarian Berdasarkan Nama,Pengguna mencari produk berdasarkan nama,Produk yang relevan ditampilkan,Placeholder
+Pencarian dan Filter Produk,Menerapkan Filter,Pengguna menerapkan filter untuk mempersempit produk,Produk yang difilter ditampilkan,Placeholder
+Halaman Detail Produk,Melihat Detail Produk,Pengguna melihat detail produk,Detail produk ditampilkan,Placeholder
+Halaman Detail Produk,Memilih Varian Produk,Pengguna memilih varian produk (misalnya, ukuran, warna),Varian yang dipilih disorot,Placeholder
+Riwayat Pesanan,Melihat Pesanan Sebelumnya,Pengguna melihat pesanan sebelumnya,Riwayat pesanan ditampilkan,Placeholder
+Riwayat Pesanan,Memesan Ulang,Pengguna memesan ulang produk dari pesanan sebelumnya,Produk ditambahkan ke keranjang,Placeholder
+Manajemen Profil Pengguna,Memperbarui Profil,Pengguna memperbarui informasi profil mereka,Profil diperbarui dengan sukses,Placeholder
+Manajemen Profil Pengguna,Mengubah Kata Sandi,Pengguna mengubah kata sandi mereka,Kata sandi diperbarui dengan sukses,Placeholder
+Wishlist,Menambahkan ke Wishlist,Pengguna menambahkan produk ke wishlist,Produk ditambahkan ke wishlist,Placeholder
+Wishlist,Memindahkan ke Keranjang,Pengguna memindahkan produk dari wishlist ke keranjang,Produk dipindahkan ke keranjang,Placeholder
+Notifikasi,Melihat Notifikasi,Pengguna melihat notifikasi,Notifikasi ditampilkan,Placeholder

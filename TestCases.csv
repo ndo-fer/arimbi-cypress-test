@@ -1,0 +1,24 @@
+Main Flow,Sub-Flow/Test Case,Description,Expected Result,Screenshots
+Login,Valid Login,User logs in with valid credentials,User is redirected to the homepage,Placeholder
+Login,Invalid Login,User attempts to log in with invalid credentials,Error message is displayed,Placeholder
+Login,Session Timeout,User session expires after inactivity,User is redirected to the login page,Placeholder
+Add to Cart,Basic Add to Cart,User adds a product to the cart from the product list,Product is added to the cart and sidebar appears,Placeholder
+Add to Cart,Add to Cart from Product Detail,User adds a product to the cart from the product detail page,Product is added to the cart and sidebar appears,Placeholder
+Add to Cart,Cart Sidebar Validation,User verifies product details in the cart sidebar,Correct product details are displayed,Placeholder
+Checkout,Checkout Button Visibility,User verifies the visibility of the "Checkout" button,Checkout button is visible,Placeholder
+Checkout,Checkout Button Functionality,User clicks the "Checkout" button,User is redirected to the checkout page,Placeholder
+Checkout,Shipment Method Selection,User selects a shipment method,Selected shipment method is highlighted,Placeholder
+Checkout,Payment Method Selection,User selects a payment method,Selected payment method is highlighted,Placeholder
+Checkout,Final Checkout,User clicks the "Final Checkout" button,Payment modal appears,Placeholder
+Checkout,Payment Modal Validation,User verifies payment details in the modal,Correct payment details are displayed,Placeholder
+Search and Filter Products,Search by Name,User searches for a product by name,Relevant products are displayed,Placeholder
+Search and Filter Products,Apply Filters,User applies filters to narrow down products,Filtered products are displayed,Placeholder
+Product Detail Page,View Product Details,User views product details,Product details are displayed,Placeholder
+Product Detail Page,Select Product Variant,User selects a product variant (e.g., size, color),Selected variant is highlighted,Placeholder
+Order History,View Past Orders,User views past orders,Order history is displayed,Placeholder
+Order History,Reorder,User reorders a product from past orders,Product is added to the cart,Placeholder
+User Profile Management,Update Profile,User updates their profile information,Profile is updated successfully,Placeholder
+User Profile Management,Change Password,User changes their password,Password is updated successfully,Placeholder
+Wishlist,Add to Wishlist,User adds a product to the wishlist,Product is added to the wishlist,Placeholder
+Wishlist,Move to Cart,User moves a product from the wishlist to the cart,Product is moved to the cart,Placeholder
+Notifications,View Notifications,User views notifications,Notifications are displayed,Placeholder
