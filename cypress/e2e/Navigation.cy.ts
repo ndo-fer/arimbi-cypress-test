@@ -1,73 +1,53 @@
-import loginPage from '../support/pages/LoginPage';
 import homePage from '../support/pages/HomePage';
 
-describe('Skenario Navigasi Navbar Arimbi.co.id', () => {
-  let user: any;
-
-  before(() => {
-    cy.fixture('users').then((data) => {
-      user = data;
+describe('Navbar Navigation', () => {
+    beforeEach(() => {
+        // Ensure user is logged in and at the home page before each test.
+        cy.login();
+        cy.visit('/');
     });
-  });
 
-  beforeEach(() => {
-    loginPage.visit();
-    // Conditional login check
-    cy.get('body').then(($body) => {
-      if ($body.find('.total-items').length === 0) {
-        cy.log('User not logged in. Proceeding to login.');
-        loginPage.goToLoginPage();
-        loginPage.login(user.validUser.noTelepon, user.validUser.password);
-        cy.wait(5000);
-        loginPage.elements.notificationBadge().should('be.visible');
-      } else {
-        cy.log('User already logged in. Skipping login step.');
-      }
+    it('should navigate to the Promo page', () => {
+        homePage.elements.navPromo().click();
+        cy.url().should('include', 'promo');
+        homePage.elements.promoBanner().should('be.visible');
     });
-  });
 
-  it('Harus bisa navigasi ke halaman Promo', () => {
-    homePage.elements.navPromo().click();
-    cy.url().should('include', 'promo');
-    homePage.elements.promoBanner().should('be.visible');
-  });
+    it('should navigate to the Special Promo page', () => {
+        homePage.elements.promoSpesialLink().click();
+        homePage.elements.pageHeader().should('contain.text', 'Promo Spesial');
+    });
 
-  it('Harus bisa navigasi ke halaman Promo Spesial', () => {
-    homePage.elements.promoSpesialLink().click();
-    homePage.elements.pageHeader().should('contain.text', 'Promo Spesial');
-  });
+    it('should navigate to the Promo 12.12 page', () => {
+        homePage.elements.promo1212Link().click();
+        homePage.elements.pageHeader().should('contain.text', 'Promo 12.12');
+    });
 
-  it('Harus bisa navigasi ke halaman Promo 12.12', () => {
-    homePage.elements.promo1212Link().click();
-    homePage.elements.pageHeader().should('contain.text', 'Promo 12.12');
-  });
+    it("should navigate to a brand page from the Women's Fashion mega menu", () => {
+        homePage.selectBrandFromFashionWanita('Nike');
+        cy.url().should('include', 'nike');
+        homePage.elements.categoryTitle().should('be.visible');
+        homePage.elements.productCards().should('have.length.greaterThan', 0);
+    });
 
-  it('Harus berhasil memilih brand Nike dari Mega Menu Fashion Wanita', () => {
-    homePage.selectBrandFromFashionWanita('Nike');
-    cy.url().should('include', 'nike');
-    homePage.elements.categoryTitle().should('be.visible');
-    homePage.elements.productCards().should('have.length.greaterThan', 0);
-  });
+    it("should navigate to the Women's Fashion category page", () => {
+        homePage.elements.navFashionWanita().click();
+        cy.url().should('include', 'fashion-wanita');
+        homePage.elements.categoryTitle().should('be.visible');
+        homePage.elements.productCards().should('have.length.greaterThan', 0);
+    });
 
-  it('Harus bisa navigasi ke halaman Fashion Wanita', () => {
-    homePage.elements.navFashionWanita().click();
-    cy.url().should('include', 'fashion-wanita');
-    homePage.elements.categoryTitle().should('be.visible');
-    homePage.elements.productCards().should('have.length.greaterThan', 0);
-  });
+    it("should navigate to the Men's Fashion category page", () => {
+        homePage.elements.navFashionPria().click();
+        cy.url().should('include', 'fashion-pria');
+        homePage.elements.categoryTitle().should('be.visible');
+        homePage.elements.productCards().should('have.length.greaterThan', 0);
+    });
 
-  it('Harus bisa navigasi ke halaman Fashion Pria', () => {
-    homePage.elements.navFashionPria().click();
-    cy.url().should('include', 'fashion-pria');
-    homePage.elements.categoryTitle().should('be.visible');
-    homePage.elements.productCards().should('have.length.greaterThan', 0);
-  });
-
-  it('Harus bisa navigasi ke halaman Fashion Anak', () => {
-    homePage.elements.megaMenuContainer().should('be.visible');
-    homePage.elements.megaMenuItem('Nike').click();
-    cy.url().should('include', 'nike');
-    homePage.elements.categoryTitle().should('be.visible');
-    homePage.elements.productCards().should('have.length.greaterThan', 0);
-  });
+    it("should navigate to a brand page from the Kid's Fashion mega menu", () => {
+        homePage.selectBrandFromFashionAnak('Nike');
+        cy.url().should('include', 'nike');
+        homePage.elements.categoryTitle().should('be.visible');
+        homePage.elements.productCards().should('have.length.greaterThan', 0);
+    });
 });

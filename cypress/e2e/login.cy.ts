@@ -1,56 +1,52 @@
 import loginPage from '../support/pages/LoginPage';
+import { UserFixture } from '../support/types';
 
-describe('Skenario Login Arimbi.co.id', () => {
-  let user: any;
+describe('Login Scenarios', () => {
+    let users: UserFixture;
 
-  before(() => {
-    cy.fixture('users').then((data) => {
-      user = data;
+    before(() => {
+        // Load fixture data once before all tests
+        cy.fixture('users.json').then((data) => {
+            users = data;
+        });
     });
-  });
 
-  beforeEach(() => {
-    loginPage.visit();
-    loginPage.goToLoginPage();
-  });
+    beforeEach(() => {
+        // Navigate to the home page and open the login modal before each test
+        cy.visit('/');
+        loginPage.goToLoginPage();
+    });
 
-  it('Harus berhasil login', () => {
-    loginPage.login(user.validUser.noTelepon, user.validUser.password);
-    cy.wait(5000);
-    loginPage.elements.notificationBadge().should('be.visible');
-  });
+    it('should login successfully with valid credentials', () => {
+        loginPage.login(users.validUser.noTelepon, users.validUser.password);
+        loginPage.elements.notificationBadge().should('be.visible');
+    });
 
-  it('Harus gagal jika password salah', () => {
-    loginPage.login(user.validUser.noTelepon, user.invalidUser.password, false);
-    cy.wait(5000);
-    loginPage.elements.errorMessage().should('be.visible');
-  });
+    it('should fail to login when using an invalid password', () => {
+        loginPage.login(users.userWithInvalidPassword.noTelepon, users.userWithInvalidPassword.password);
+        loginPage.elements.errorMessage().should('be.visible');
+    });
 
-  it('Harus gagal jika No Telepon tidak terdaftar', () => {
-    loginPage.login(user.invalidUser.noTelepon, user.validUser.password, false);
-    cy.wait(5000);
-    loginPage.elements.submitBtn().click();
-    loginPage.elements.errorMessage().should('be.visible');
-  });
+    it('should fail to login when using an unregistered phone number', () => {
+        loginPage.login(users.unregisteredUser.noTelepon, users.unregisteredUser.password);
+        loginPage.elements.errorMessage().should('be.visible');
+    });
 
-  it('Harus diarahkan ke status logout jika sesi kedaluwarsa', () => {
-    // 1. Initial Login
-    loginPage.login(user.validUser.noTelepon, user.validUser.password);
-    cy.wait(5000);
-    
-    // 2. Success Confirmation
-    loginPage.elements.notificationBadge().should('be.visible');
+    it('should be in a logged out state after the session expires', () => {
+        // 1. Perform a login to establish a session
+        loginPage.login(users.validUser.noTelepon, users.validUser.password);
+        loginPage.elements.notificationBadge().should('be.visible');
 
-    // 3. Simulate Session Expiry
-    cy.clearAllCookies();
-    cy.clearAllLocalStorage();
-    cy.clearAllSessionStorage();
+        // 2. Simulate session expiry
+        cy.clearAllCookies();
+        cy.clearAllLocalStorage();
+        cy.clearAllSessionStorage();
+        
+        // 3. Reload the page to trigger session check
+        cy.reload();
 
-    // 4. Trigger Session Check
-    cy.reload();
-
-    // 5. Final Assertions
-    loginPage.elements.loginPageBtn().should('be.visible');
-    loginPage.elements.notificationBadge().should('not.exist');
-  });
+        // 4. Assert logged out state
+        loginPage.elements.loginPageBtn().should('be.visible');
+        loginPage.elements.notificationBadge().should('not.exist');
+    });
 });

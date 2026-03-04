@@ -1,39 +1,55 @@
 class CheckoutPage {
-  elements = {
-    // Note: Selectors for shipping and payment might need adjustment based on the actual UI
-    shippingMethodOption: () => cy.get('.shipping-item').first(),
-    paymentMethodOption: () => cy.get('.payment-item').first(),
-    placeOrderBtn: () => cy.contains('button', 'Selesaikan Pesanan'),
-    confirmPaymentBtn: () => cy.contains('button', 'Buat Pembayaran'),
-    finishLaterBtn: () => cy.contains('button', 'Selesaikan Nanti'),
-    refreshStatusBtn: () => cy.contains('button', 'Refresh Status'),
-  };
+    // --- ELEMENTS ---
+    elements = {
+        shippingMethodOption: () => cy.get('.shipping-item').first(),
+        paymentMethodOption: () => cy.get('.payment-item').first(),
+        placeOrderBtn: () => cy.contains('button', 'Selesaikan Pesanan'),
+        confirmPaymentBtn: () => cy.contains('button', 'Buat Pembayaran'),
+        finishLaterBtn: () => cy.contains('button', 'Selesaikan Nanti'),
+        refreshStatusBtn: () => cy.contains('button', 'Refresh Status'),
+    };
 
-  selectShippingMethod(name?: string) {
-    cy.get('.shipping-item', { timeout: 10000 }).should('be.visible');
-    if (name) {
-      cy.contains('.shipping-item', name).scrollIntoView().should('be.visible').click({ force: true });
-    } else {
-      this.elements.shippingMethodOption().should('be.visible').click({ force: true });
+    // --- ACTIONS ---
+    selectShippingMethod(name?: string) {
+        const shippingName = name || 'default';
+        Cypress.log({
+            displayName: 'CHECKOUT',
+            message: `Selecting shipping method: ${shippingName}`,
+        });
+
+        cy.get('.shipping-item', { timeout: 10000 }).should('be.visible');
+
+        const selection = name ? cy.contains('.shipping-item', name) : this.elements.shippingMethodOption();
+        selection.scrollIntoView({ log: false }).should('be.visible').click({ force: true, log: false });
     }
-  }
 
-  selectPaymentMethod(name?: string) {
-    if (name) {
-      cy.contains('.payment-item', name).scrollIntoView().should('be.visible').click({ force: true });
-    } else {
-      this.elements.paymentMethodOption().should('be.visible').click({ force: true });
+    selectPaymentMethod(name?: string) {
+        const paymentName = name || 'default';
+        Cypress.log({
+            displayName: 'CHECKOUT',
+            message: `Selecting payment method: ${paymentName}`,
+        });
+
+        const selection = name ? cy.contains('.payment-item', name) : this.elements.paymentMethodOption();
+        selection.scrollIntoView({ log: false }).should('be.visible').click({ force: true, log: false });
     }
-  }
 
-  placeOrder() {
-    this.elements.placeOrderBtn().should('be.visible').click();
-  }
+    placeOrder() {
+        Cypress.log({
+            displayName: 'CHECKOUT',
+            message: 'Placing the order',
+        });
+        this.elements.placeOrderBtn().should('be.visible').click({ log: false });
+    }
 
-  confirmPayment() {
-    cy.get('.modal.show').filter(':visible').scrollTo('bottom', { ensureScrollable: false });
-    this.elements.confirmPaymentBtn().scrollIntoView().should('be.visible').click();
-  }
+    confirmPayment() {
+        Cypress.log({
+            displayName: 'CHECKOUT',
+            message: 'Confirming the payment',
+        });
+        cy.get('.modal.show', { log: false }).filter(':visible').scrollTo('bottom', { ensureScrollable: false });
+        this.elements.confirmPaymentBtn().scrollIntoView({ log: false }).should('be.visible').click({ log: false });
+    }
 }
 
 export default new CheckoutPage();
